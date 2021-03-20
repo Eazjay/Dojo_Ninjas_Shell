@@ -1,0 +1,18 @@
+
+To create 3 new dojos: I set a variable individually to be able to have access... new_dojo_1 = Dojo.objects.create(name="", city="", state="") etc
+
+To delete the 3 dojos: Dojo.objects.all().delete()
+
+To create 3 ninjas that belong to the first dojo: new_ninja_1 = Ninja.objects.create(first_name="", last_name="", dojo=new_dojo_1) etc
+
+To create 3 ninjas that belong to the second dojo: new_ninja_4 = Ninja.objects.create(first_name="", last_name="", dojo=new_dojo_2) etc
+
+To create 3 ninjas that belong to the third dojo: new_ninja_7 = Ninja.objects.create(first_name="", last_name="", dojo=new_dojo_3) etc.
+
+To retrieve all the ninjas from the first dojo: Dojo.objects.first().ninjas.all() .... I could also also say new_dojo_1.ninja.all(), but the first method just makes it more easier for me.
+
+To retrieve all the ninjas from the last dojo: Dojo.objects.last().ninjas.all()
+
+To retrieve the last ninja's dojo: Ninja.objects.last().dojo
+
+To add a new text field to the dojo class: Go into the models.py in the visual code and input the new text field... desc = models.TextField()
